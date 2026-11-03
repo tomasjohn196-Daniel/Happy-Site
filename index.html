@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+
+  <title>Tomas John | AI Engineer & Full-Stack Developer</title>
+
+  <meta name="description" content="Tomas John — AI Engineer and Full-Stack Developer building intelligent applications, AI assistants, and modern web experiences.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080b14;
+      --surface: #101625;
+      --surface-light: #151e30;
+      --text: #f3f5fa;
+      --muted: #9ba8bc;
+      --blue: #648cff;
+      --purple: #a477ff;
+      --border: rgba(255,255,255,.09);
+      --gradient: linear-gradient(120deg,#648cff,#a477ff);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,11,20,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--muted);
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse at 80% 30%,rgba(100,140,255,.13),transparent 40%),
+        radial-gradient(ellipse at 15% 70%,rgba(164,119,255,.10),transparent 40%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #b6c5e9;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5ee0a0;
+      box-shadow: 0 0 12px #5ee0a0;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(43px, 7vw, 76px);
+      line-height: 1.1;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 23px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 35px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(30px, 5vw, 43px);
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 40px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 16px;
+    }
+
+    .about-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .about-item {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about-item:last-child {
+      border: 0;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 25px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: .25s;
+    }
+
+    .skill-card:hover,
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(100,140,255,.45);
+    }
+
+    .skill-icon {
+      font-size: 27px;
+      margin-bottom: 14px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 28px;
+      transition: .25s;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .project-icon {
+      font-size: 28px;
+    }
+
+    .project-status {
+      font-size: 11px;
+      color: #a9b9ff;
+      background: rgba(100,140,255,.12);
+      padding: 5px 10px;
+      border-radius: 30px;
+    }
+
+    .project-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tags span {
+      background: var(--surface-light);
+      color: #b9c7e3;
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      font-size: 11px;
+      border-radius: 5px;
+    }
+
+    /* GOALS */
+
+    .goals-box {
+      background:
+        linear-gradient(120deg,rgba(100,140,255,.13),rgba(164,119,255,.08)),
+        var(--surface);
+      border: 1px solid var(--border);
+      padding: 35px;
+      border-radius: 18px;
+    }
+
+    .goals-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+      color: var(--muted);
+    }
+
+    .goals-list li::before {
+      content: "✦";
+      color: var(--blue);
+      margin-right: 10px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center,rgba(100,140,255,.10),transparent 65%);
+    }
+
+    .contact .section-description {
+      margin: 0 auto 30px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 800px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 650px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: #101625;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero {
+        min-height: 570px;
+        padding: 75px 0;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .goals-list {
+        grid-template-columns: 1fr;
+      }
+
+      .goals-box {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="container">
+      <a href="#home" class="logo">
+        <span class="gradient-text">TJ.</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            AI & Software Development
+          </div>
+
+          <h1>
+            Building the future<br>
+            with <span class="gradient-text">AI & Code.</span>
+          </h1>
+
+          <p class="hero-description">
+            Hi, I'm Tomas John. An aspiring AI Engineer and
+            Full-Stack Developer passionate about building
+            intelligent applications, AI assistants, and modern
+            digital experiences.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              Explore Projects ↗
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              Let's Connect
+            </a>
+
+            <a href="resume.md" class="btn btn-secondary">
+              View Resume
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Learning continuously. Building practically. Innovating with AI.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-text">
+            <div class="section-label">Introduction</div>
+            <h2 class="section-title">
+              About <span class="gradient-text">Me</span>
+            </h2>
+
+            <p>
+              I'm an aspiring developer focused on Artificial
+              Intelligence and Full-Stack Software Development.
+            </p>
+
+            <p>
+              My interests include Generative AI, Large Language
+              Models, AI agents, Python automation, and building
+              web applications that solve real-world problems.
+            </p>
+
+            <p>
+              My goal is to turn innovative ideas into useful
+              software products while growing my engineering skills
+              through practical projects and open-source development.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>Quick Overview</h3>
+            <div class="about-item">👨‍💻 Role: Aspiring AI Engineer</div>
+            <div class="about-item">🌐 Focus: Full-Stack Development</div>
+            <div class="about-item">🤖 Interest: Generative AI & LLMs</div>
+            <div class="about-item">⚡ Language: Python & JavaScript</div>
+            <div class="about-item">🚀 Goal: Build impactful AI products</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">
+          My <span class="gradient-text">Tech Stack</span>
+        </h2>
+
+        <p class="section-description">
+          Technologies and areas I'm learning and exploring
+          through hands-on development.
+        </p>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-icon">🤖</div>
+            <h3>Artificial Intelligence</h3>
+            <p>Generative AI, LLMs, prompt engineering, AI assistants and AI agents.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <h3>Programming</h3>
+            <p>Python, JavaScript, TypeScript, HTML5 and CSS3.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Frontend Development</h3>
+            <p>React, Next.js, responsive design and modern interfaces.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <h3>Backend Development</h3>
+            <p>Node.js, Express, Python APIs and backend fundamentals.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <h3>Databases</h3>
+            <p>SQL, PostgreSQL and MongoDB fundamentals.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <h3>Developer Tools</h3>
+            <p>Git, GitHub, VS Code, Docker and API integration.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-label">My Work</div>
+        <h2 class="section-title">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+
+        <p class="section-description">
+          A selection of projects I'm developing and exploring
+          as I grow as an AI and software developer.
+        </p>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-icon">💰</span>
+              <span class="project-status">Project showcase</span>
+            </div>
+            <h3>Personal Expense Tracker</h3>
+            <p>
+              A software project focused on tracking expenses,
+              organizing financial records, and understanding
+              spending patterns.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Data Management</span>
+              <span>Software Development</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-icon">🤖</span>
+              <span class="project-status">Planned</span>
+            </div>
+            <h3>AI Personal Assistant</h3>
+            <p>
+              An AI assistant concept designed to understand
+              natural language, answer questions, and support
+              everyday tasks.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>LLMs</span>
+              <span>AI APIs</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-icon">💬</span>
+              <span class="project-status">Learning project</span>
+            </div>
+            <h3>AI Chatbot</h3>
+            <p>
+              Exploring conversational AI, language models,
+              and intelligent user interactions.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Generative AI</span>
+              <span>APIs</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-icon">🌐</span>
+              <span class="project-status">Portfolio</span>
+            </div>
+            <h3>Developer Portfolio</h3>
+            <p>
+              This responsive personal website showcasing
+              my interests, learning journey, and software
+              development projects.
+            </p>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GitHub Pages</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section id="goals">
+      <div class="container">
+
+        <div class="section-label">What's Next</div>
+        <h2 class="section-title">
+          My <span class="gradient-text">Direction</span>
+        </h2>
+
+        <div class="goals-box">
+          <ul class="goals-list">
+            <li>Build practical AI applications</li>
+            <li>Master Python programming</li>
+            <li>Develop LLM-powered assistants</li>
+            <li>Improve full-stack engineering</li>
+            <li>Explore AI agents and automation</li>
+            <li>Learn computer vision and robotics</li>
+            <li>Contribute to open source</li>
+            <li>Build and launch real products</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container">
+
+        <div class="section-label">Get In Touch</div>
+
+        <h2 class="section-title">
+          Let's Build Something <span class="gradient-text">Great.</span>
+        </h2>
+
+        <p class="section-description">
+          Interested in AI, software engineering, and innovative
+          technology? Let's connect, share ideas, and build together.
+        </p>
+
+        <div class="contact-links">
+
+          <a href="mailto:tomasjohn196@gmail.com"
+             class="btn btn-primary">
+            ✉ Email Me
+          </a>
+
+          <a href="https://github.com/HendersonBuildAI"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-secondary">
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>
+        © <span id="year"></span> Tomas John.
+        Built with passion for AI and technology.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      menuBtn.setAttribute("aria-expanded", isOpen);
+      menuBtn.textContent = isOpen ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
