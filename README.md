@@ -57,20 +57,6 @@ AI engineer with experience developing machine learning solutions and AI-driven 
 - Retrieval-Augmented Generation (RAG)
 - AI Agent Development
 
-## 🛠️ Featured Projects
-
-### 1. AI Assistant Application
-Building an intelligent AI assistant that can understand user questions and generate helpful responses.
-
-### 2. AI-Powered Chatbot
-Developing conversational AI applications with natural language processing and API integrations.
-
-### 3. Full-Stack Web Application
-Creating modern, responsive web applications with frontend and backend integration.
-
-### 4. AI Automation System
-Exploring intelligent automation solutions that reduce repetitive tasks and improve productivity.
-
 ## 🎓 Learning & Professional Development
 
 - Artificial Intelligence and Machine Learning
