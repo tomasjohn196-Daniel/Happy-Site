@@ -7,7 +7,7 @@
 📧 **Email:** tomasjohn196@gmail.com  
 
 ---
-##My 🚀 Professional Summary
+## My 🚀 Professional Summary
 
 AI engineer with experience developing machine learning solutions and AI-driven applications across game technology and IoT security. Background includes Python and C++ development, reinforcement learning, threat-detection software, algorithm design, and cross-functional technical leadership. Recognized for leading AI initiatives, improving user retention, and building reusable software components. Technical toolkit includes Python, PyTorch, TensorFlow, and machine learning and deep learning fundamentals.
 ## 💻 Technical Skills
