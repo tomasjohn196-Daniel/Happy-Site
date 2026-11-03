@@ -3,23 +3,14 @@
 ### AI Engineer | Full-Stack Developer | AI Application Developer
 
 📍 United States  
-🌐 **Portfolio:** [HendersonBuildAI.github.io](https://HendersonBuildAI.github.io)  
-💻 **GitHub:** [github.com/HendersonBuildAI](https://github.com/HendersonBuildAI)  
-📧 **Email:** your-email@example.com  
-🔗 **LinkedIn:** Add your LinkedIn profile
+🌐 **Portfolio:** [HendersonBuildAI.github.io](https://Daniel.github.io)  
+💻 **GitHub:** [github.com/HendersonBuildAI](https://github.com/Daniel)  
+📧 **Email:** tomasjohn196@gmail.com  
 
 ---
+##My 🚀 Professional Summary
 
-## 🚀 Professional Summary
-
-Aspiring AI Engineer and Full-Stack Developer passionate about building intelligent software, AI-powered applications, automation systems, and modern web experiences.
-
-Focused on developing practical solutions using Python, Artificial Intelligence, Large Language Models (LLMs), APIs, and full-stack technologies.
-
-Interested in creating AI assistants, chatbots, intelligent automation tools, and scalable web applications that solve real-world problems.
-
-Committed to continuous learning, innovation, and building impactful technology.
-
+AI engineer with experience developing machine learning solutions and AI-driven applications across game technology and IoT security. Background includes Python and C++ development, reinforcement learning, threat-detection software, algorithm design, and cross-functional technical leadership. Recognized for leading AI initiatives, improving user retention, and building reusable software components. Technical toolkit includes Python, PyTorch, TensorFlow, and machine learning and deep learning fundamentals.
 ## 💻 Technical Skills
 
 ### Artificial Intelligence & Machine Learning
@@ -43,7 +34,6 @@ Committed to continuous learning, innovation, and building impactful technology.
 ### Frontend Development
 - React.js
 - Next.js
-- Tailwind CSS
 - Responsive Web Design
 - Modern UI/UX Development
 
@@ -60,8 +50,6 @@ Committed to continuous learning, innovation, and building impactful technology.
 - MongoDB
 - Git & GitHub
 - VS Code
-- API Integration
-- Docker Fundamentals
 
 ### AI Technologies
 - OpenAI API
@@ -103,33 +91,4 @@ Exploring intelligent automation solutions that reduce repetitive tasks and impr
 - AI Agents and Workflow Automation
 - Computer Vision and Robotics
 - Software Engineering and System Design
-
-## 🎯 Career Objectives
-
-My goal is to become a professional AI Engineer and Full-Stack Developer capable of designing, developing, and deploying intelligent applications.
-
-I am particularly interested in:
-
-- Building AI applications like ChatGPT.
-- Developing intelligent AI assistants and autonomous agents.
-- Creating scalable full-stack applications.
-- Integrating LLMs into real-world software products.
-- Exploring computer vision, robotics, and advanced AI.
-- Contributing to open-source AI projects.
-
-## 🤝 Let's Connect
-
-I'm interested in connecting with developers, AI engineers, startup founders, and technology enthusiasts.
-
-Open to:
-- AI and software development collaborations.
-- Open-source contributions.
-- Innovative startup projects.
-- Learning opportunities.
-- Junior AI Engineer and Full-Stack Developer opportunities.
-
-**Let's build the future with AI!** 🚀
-
----
-
 ⭐ *Building. Learning. Innovating. One project at a time.*
