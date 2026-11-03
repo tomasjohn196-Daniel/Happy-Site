@@ -2,8 +2,8 @@
 ### AI Engineer | Full-Stack Developer | AI Application Developer
 
 📍 United States  
-🌐 **Portfolio:** [HendersonBuildAI.github.io](https://Daniel.github.io)  
-💻 **GitHub:** [github.com/HendersonBuildAI](https://github.com/Daniel)  
+🌐 **Portfolio:** [Daniel.github.io](https://Daniel.github.io)  
+💻 **GitHub:** [github.com/Daniel](https://github.com/Daniel)  
 📧 **Email:** tomasjohn196@gmail.com  
 
 ---
