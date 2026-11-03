@@ -1,4 +1,3 @@
-# Happy-Site
 # Tomas John
 ### AI Engineer | Full-Stack Developer | AI Application Developer
 
